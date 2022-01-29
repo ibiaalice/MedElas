@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:med_elas/app/home/widgets/call_button.dart';
 import 'package:med_elas/app/home/widgets/drawer.dart';
 import 'package:med_elas/app/home/widgets/in_person_card.dart';
+import 'package:med_elas/app/home/widgets/info_person_card.dart';
+import 'package:med_elas/app/local/widgets/clinical_map.dart';
+import 'package:med_elas/app/home/widgets/remote_card.dart';
 import 'package:med_elas/app/widgets/constants.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -23,9 +26,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       floatingActionButton: CallButton(),
-      body: Column(
+      body: ListView(
         children: [
+          InfoPersonCard(),
           InPersonCard(),
+          RemoteCard(),
         ],
       ),
     );
