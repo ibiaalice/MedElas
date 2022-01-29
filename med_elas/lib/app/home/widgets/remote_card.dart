@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_elas/app/avaliable_time/avaliable_time_page.dart';
 import 'package:med_elas/app/home/widgets/card_title.dart';
 import 'package:med_elas/app/home/widgets/option_card_button.dart';
 import 'package:med_elas/app/widgets/constants.dart';
@@ -21,7 +22,10 @@ class RemoteCard extends StatelessWidget {
             OptionCardButton(
               title: "Horários Disponíveis",
               icon: Icons.missed_video_call_sharp,
-              onTap: () => print("sjhsjhjsh"),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => AvaliableTimePage())),
             ),
             OptionCardButton(
               title: "Médicos",
