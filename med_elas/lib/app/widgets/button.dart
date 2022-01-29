@@ -18,6 +18,7 @@ class ButtonClick extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         height: 44.0,
+        width: 180,
         child: RaisedButton(
             child: Text(
               title,
