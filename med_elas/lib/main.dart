@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:med_elas/app/home/home_page.dart';
+import 'package:med_elas/app/initialPage/initial_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: ''),
+      home: InitalPage(),
     );
   }
 }
