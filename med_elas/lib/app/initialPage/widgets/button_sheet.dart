@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_elas/app/widgets/constants.dart';
 
 class BottomOpptions extends StatelessWidget {
   final Widget top;
@@ -14,7 +15,7 @@ class BottomOpptions extends StatelessWidget {
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(40.0), topRight: Radius.circular(40.0)),
         child: Container(
-          child: Column(
+          child: ListView(
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(
@@ -29,13 +30,18 @@ class BottomOpptions extends StatelessWidget {
                     icon: Icon(
                       Icons.close,
                       size: 30.0,
-                      color: Theme.of(context).primaryColor,
+                      color: PRIMARY_COLLOR,
                     ),
                   ),
                 ),
               ),
-              top,
-              SizedBox(height: 60),
+              Padding(
+                padding: EdgeInsets.zero,
+                child: top,
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Expanded(child: screen),
             ],
           ),

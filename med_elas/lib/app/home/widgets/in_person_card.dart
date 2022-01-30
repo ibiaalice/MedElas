@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_elas/app/diseases/diseases.dart';
 import 'package:med_elas/app/home/widgets/card_title.dart';
 import 'package:med_elas/app/home/widgets/option_card_button.dart';
 import 'package:med_elas/app/local/local_page.dart';
@@ -22,20 +23,12 @@ class InPersonCard extends StatelessWidget {
               title: "Atendimento Presencial",
             ),
             OptionCardButton(
-              title: "Marcação",
-              icon: Icons.access_alarm_rounded,
+              title: "Hospitais",
+              icon: Icons.local_hospital,
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => SchedulePage())),
-            ),
-            OptionCardButton(
-              title: "Localidade",
-              icon: Icons.gps_fixed_rounded,
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (BuildContext context) => LocalPage())),
+                      builder: (BuildContext context) => Diseases())),
             ),
           ],
         ),

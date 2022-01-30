@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_elas/app/widgets/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -37,14 +38,14 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
             borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: PRIMARY_COLLOR,
               width: 2,
             ),
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
             borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: PRIMARY_COLLOR,
               width: 3,
             ),
           ),

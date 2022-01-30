@@ -3,11 +3,10 @@ import 'package:med_elas/app/initialPage/widgets/button_sheet.dart';
 import 'package:med_elas/app/initialPage/widgets/clipper.dart';
 import 'package:med_elas/app/initialPage/widgets/logo.dart';
 import 'package:med_elas/app/initialPage/widgets/top.dart';
-import 'package:med_elas/app/initialPage/widgets/top_login.dart';
-import 'package:med_elas/app/initialPage/widgets/top_register.dart';
 import 'package:med_elas/app/login/login.dart';
 import 'package:med_elas/app/register/persion_informations.dart';
 import 'package:med_elas/app/widgets/custom_button.dart';
+import 'package:med_elas/app/widgets/constants.dart';
 
 class InitalPage extends StatefulWidget {
   @override
@@ -19,7 +18,7 @@ class _InitalPageState extends State<InitalPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: PRIMARY_COLLOR,
       body: Builder(builder: (context) {
         return Column(
           children: <Widget>[
@@ -29,15 +28,15 @@ class _InitalPageState extends State<InitalPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   CustomButton(
-                    label: "LOGIN",
+                    label: "ENTRAR",
                     primaryColor: Colors.white,
-                    secondaryColor: Theme.of(context).primaryColor,
+                    secondaryColor: PRIMARY_COLLOR,
                     onPressed: () => _loginSheet(context),
                   ),
                   SizedBox(height: 20),
                   CustomButton(
-                    label: "REGISTER",
-                    primaryColor: Theme.of(context).primaryColor,
+                    label: "CADASTRAR",
+                    primaryColor: PRIMARY_COLLOR,
                     secondaryColor: Colors.white,
                     onPressed: () => _registerSheet(context),
                   ),
@@ -71,9 +70,8 @@ class _InitalPageState extends State<InitalPage> {
         return BottomOpptions(
           screen: Login(),
           top: Top(
-              top: Top(
-            top: TopLogin(),
-          )),
+            label: "ENTRAR",
+          ),
         );
       },
     );
@@ -86,7 +84,7 @@ class _InitalPageState extends State<InitalPage> {
         return BottomOpptions(
             screen: PersionInformations(),
             top: Top(
-              top: TopRegister(),
+              label: "CADASTRAR",
             ));
       },
     );

@@ -20,17 +20,20 @@ class RemoteCard extends StatelessWidget {
               icon: Icons.phone_android_rounded,
             ),
             OptionCardButton(
-              title: "Horários Disponíveis",
-              icon: Icons.missed_video_call_sharp,
+              title: "Marcar Consulta",
+              icon: Icons.video_call,
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (BuildContext context) => AvaliableTimePage())),
             ),
             OptionCardButton(
-              title: "Médicos",
-              icon: Icons.medical_services,
-              onTap: () => print("shjhh"),
+              title: "Consulta Agora",
+              icon: Icons.missed_video_call_sharp,
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => AvaliableTimePage())),
             ),
           ],
         ),

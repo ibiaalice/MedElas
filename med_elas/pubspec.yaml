@@ -31,6 +31,8 @@ dependencies:
   flutter_map: ^0.8.2
   latlong: ^0.6.1
   calendar_calendar: ^0.0.1
+  flutter_launcher_icons: ^0.7.5
+  splashscreen: ^1.2.0
 
 
 dev_dependencies:
@@ -54,6 +56,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - asserts/logo.png
+    - asserts/symbol.png
+    - asserts/logo_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -80,3 +84,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "asserts/logo_icon.png"

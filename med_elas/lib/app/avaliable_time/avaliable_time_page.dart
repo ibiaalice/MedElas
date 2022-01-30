@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_elas/app/avaliable_time/widgets/avaliable_time_grid_tile.dart';
 import 'package:med_elas/app/widgets/constants.dart';
 
 class AvaliableTimePage extends StatelessWidget {
@@ -11,61 +12,41 @@ class AvaliableTimePage extends StatelessWidget {
         backgroundColor: PRIMARY_COLLOR,
         title: Text("Horários disponíveis"),
       ),
-      floatingActionButton: FloatingActionButton.extended(
+      /*floatingActionButton: FloatingActionButton.extended(
           backgroundColor: SECOND_COLLOR,
           onPressed: () => print("tap it"),
-          label: Text("Requisitar horário")),
+          label: Text("Requisitar horário")),*/
       body: Container(
         child: Column(
           children: [
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(
-                "Lista de Horários e Especialidades",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  child: Text(
+                    "Lista de Horários e Especialidades",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w500,
+                      color: PRIMARY_COLLOR,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  alignment: Alignment.center,
+                ),
               ),
             ),
             Expanded(
-                child: GridView.count(
-                    crossAxisCount: 4,
-                    children:
-                        List.generate(20, (index) => AvaliableTimeGridTile())))
+              child: ListView(
+                children: [
+                  ...List.generate(20, (index) => AvaliableTimeGridTile()),
+                ],
+              ),
+            )
           ],
         ),
       ),
-    );
-  }
-}
-
-class AvaliableTimeGridTile extends StatelessWidget {
-  const AvaliableTimeGridTile() : super();
-
-  @override
-  Widget build(BuildContext context) {
-    MOCK_DOCTORS_NAME.shuffle();
-    MOCK_SPECIALITIES.shuffle();
-    MOCK_SCHREDULES.shuffle();
-
-    final doctorName = MOCK_DOCTORS_NAME[0];
-    final specialite = MOCK_SPECIALITIES[0];
-    final schredule = MOCK_SCHREDULES[0];
-
-    return Card(
-      child: Container(
-          color: PRIMARY_COLLOR,
-          height: 40,
-          width: 40,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                schredule,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-              ),
-              Text(doctorName),
-              Text(specialite)
-            ],
-          )),
     );
   }
 }

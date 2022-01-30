@@ -25,7 +25,7 @@ class ButtonClick extends StatelessWidget {
               style: TextStyle(fontSize: 18.0),
             ),
             textColor: Colors.white,
-            color: Theme.of(context).primaryColor,
+            color: colorButton,
             onPressed: onPressed));
   }
 }

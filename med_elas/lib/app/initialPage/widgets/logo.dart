@@ -6,28 +6,26 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 220,
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-                child: Container(
-              child: Align(
-                child: Container(
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.white),
-                  width: 350,
-                  height: 350,
-                ),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+              child: Container(
+            child: Align(
+              child: Container(
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                width: 450,
+                height: 450,
               ),
-              height: 184,
-            )),
-            Positioned(
-              child: Container(height: 184, child: Align(child: ImageLogo())),
             ),
-          ],
-        ),
+            height: 284,
+          )),
+          Positioned(
+            child: Container(
+                height: 284,
+                child: Align(child: ImageLogo(file: "asserts/logo.png"))),
+          ),
+        ],
       ),
     );
   }
