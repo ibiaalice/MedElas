@@ -1,16 +1,18 @@
-# med_elas
+# MedElas
 
-A new Flutter project.
 
-## Getting Started
+para executar o aplicativo, é necessária a presença do *flutter versão 1.22.6*.  
 
-This project is a starting point for a Flutter application.
+Contendo o flutter, em um terminal:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+``` cd med_elas```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+``` flutter run ```
+
+
+> obs: o MedElas é apenas um esboço de um aplicativo. Não há funcionalidades estabelecidas
+
+
+
+
